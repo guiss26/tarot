@@ -1,0 +1,14 @@
+.reading-button{
+    padding: 15px 20px;
+    background-color: var(--color-golden-buttons);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #0E0C0C;
+    font-weight: 500;
+}
+
+.reading-button:hover {
+    background-color: #9f8428;
+    /* color: var(--color-text-nav-footer); */
+    color: #221f1f;
+}

@@ -1,0 +1,34 @@
+#top {
+    background-color: var(--color-shadow-black);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-title, .nav-link {
+    text-decoration: none;
+    color: var(--color-text-nav-footer);
+}
+
+.nav-title {
+    font-size: 30px;
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu-item {
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    color: #9b9b9a;
+    background-color: #424242;
+    text-decoration: underline;
+}

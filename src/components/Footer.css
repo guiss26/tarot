@@ -1,0 +1,9 @@
+footer {
+    background-color: var(--color-shadow-black);
+    color: var(--color-text-nav-footer);
+    padding: 50px;
+}
+
+footer p{
+    text-align: center;
+}
