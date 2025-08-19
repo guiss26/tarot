@@ -10,7 +10,7 @@ const CardDetail = () => {
                 <div className="title-content">
                     {/* <h2>Detalle cartas</h2> */}
                     <h3 className='title-detail'>🔮 La sacerdotiza</h3>
-                    <p>Arcano #1</p>
+                    <p className='subtitle-detail'>Arcano #1</p>
                 </div>
                 {/* <div className="card-content-detail">
                     <div className='card-tarot-description'></div>

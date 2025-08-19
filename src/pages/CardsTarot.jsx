@@ -3,6 +3,7 @@ import './CardsTarot.css'
 import ReadingButton from "../components/ReadingButton"
 import TarotCard from '../components/TarotCard'
 
+//HACER AQUÍ LLAMADA A LA API
 const CardsTarot = () => {
     return (
         <>
@@ -14,7 +15,7 @@ const CardsTarot = () => {
                     <ReadingButton></ReadingButton>
                 </div>
                 <div className="cards-box">
-                    <div className="card">
+                    <div className="card-tarot-s">
                         <Link to="/carta-detalle"><img className='img-card' src="public\base-card-tarot.PNG" alt="tarot-card" /></Link>
                         <Link to="/carta-detalle"><img className='img-card' src="public\base-card-tarot.PNG" alt="tarot-card" /></Link>
                         <Link to="/carta-detalle"><img className='img-card' src="public\base-card-tarot.PNG" alt="tarot-card" /></Link>

@@ -1,0 +1,13 @@
+.lecture-completed {
+    text-align: center;
+    margin: 5% 0;
+}
+
+.title-lecture h2 {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.foot-text {
+    font-style: italic;
+}

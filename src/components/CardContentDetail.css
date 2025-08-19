@@ -7,12 +7,12 @@
 }
 
 .card-tarot-description, .card-scientist-description{
-    /* background-color: burlywood; */
     background-color: var(--color-beige-darker);
     text-align: center;
-    padding: 50px 40px;
+    padding: 30px 40px;
     border-radius: 10px;
-    height: 650px;
+    border: 2px solid black;
+    height: 500px;
 }
 
 .title-tarot-card, .title-scientist-card {
@@ -21,9 +21,9 @@
     padding-bottom: 15px;
 }
 
-.img-card-tarot, .img-card-scientist {
+/* .img-card-tarot, .img-card-scientist {
     width: 200px;
-}
+} */
 
 .title-tarot, .title-scientist {
     font-weight: 500;
@@ -33,5 +33,6 @@
 
 .description-tarot, .description-scientist {
     text-align: left;
+    font-size: 13px;
     /* overflow: scroll; ver cómo hacer el scroll invisible o estilarlo*/
 }
