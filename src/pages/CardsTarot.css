@@ -1,0 +1,42 @@
+.cards-tarot-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.text-descripction-cards-tarot {
+    /* background-color: red; */
+    box-sizing: border-box;
+    /* padding: 10px 20px 30px 20px; */
+    padding: 10px 0 30px 0;
+    width: 100%;
+}
+
+.subtitle-cards-tarot {
+    font-weight: 500;
+}
+
+.paragraph-cards-tarot {
+    padding: 20px 0 40px 0;
+}
+
+.cards-box {
+    /* background-color: aqua; */
+    padding: 70px 20px;
+    /* width: 800px; */
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.img-card {
+    width: 200px;/*prueba*/
+}
