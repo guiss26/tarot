@@ -1,3 +1,4 @@
+
 .cards-lecture-box {
     display: flex;
     justify-content: center;
@@ -16,6 +17,11 @@
 
     /* overflow-y: scroll; */
     overflow-y: auto;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
 }
 /*scrollbar*/
 .box-card::-webkit-scrollbar {
@@ -46,9 +52,10 @@
     padding-bottom: 15px;
 }
 
-/* .box-card img {
-    width: 200px;
-} */
+.box-card img {
+    /* width: 200px; */
+    margin: 0 auto;
+}
 
 .subtitle-lecture-tarot {
     font-weight: 500;
@@ -59,7 +66,7 @@
 .title-lecture-tarot {
     text-align: left;
     font-size: 13px;
-    
+    margin-bottom: 20px;
     /* overflow: scroll; ver cómo hacer el scroll invisible o estilarlo */
 }
 

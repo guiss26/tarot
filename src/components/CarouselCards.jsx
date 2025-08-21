@@ -1,6 +1,8 @@
 import './CarouselCards.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { getAllCards } from '../services/TarotServices'
+
 
 const cards = [//ver como adaptar esto de la API
     "public\base-card-tarot.PNG",
@@ -12,15 +14,38 @@ const cards = [//ver como adaptar esto de la API
 ]
 
 const CarouselCards = () => {//ver como adaptar esto de la API
-    const [currentCards, setCurrentCards] = useState(0)
+    /** PETICIÓN API - GET */
+    const [tarotCards, setTarotCards] = useState([])//crea un estado llamado tarotCards que empieza con un array vacío.Aquí se guardarán la lista de las card que vienen de la API
+    const [loading, setLoading] = useState(true)//Sirve para mostrar un mensaje de "Cargando..." mientras se obtienen los datos
+    const [currentCards, setCurrentCards] = useState(0) //índice actual
+
+    useEffect(() => {
+        const fetchData = async () => {//vamos a hacer una llamada a la API
+            try {
+                const data = await getAllCards()//obtener los datos de las cartas usando la función getAllCards()
+                setTarotCards(data)
+            } catch (error) {
+                console.error('Error al cargar cartas tarot: ', error)
+            } finally {//Cuando termina (haya ido bien o mal), se pone 'loading' en 'false' -> ya no está cargando
+                setLoading(false)
+            }
+        }
+
+        fetchData()//LLama a la función fetchData para empezar a obtener los datos cuando el cuando el componente se monta.
+    }, [])//El [] vacío le dice a useEffect que solo ejecute esto *una vez* al principio
+
+    // const [currentCards, setCurrentCards] = useState(0)
 
     const prevCard = () => { //CORREGIR ESTO AL CONSULTAR A LA API
-        setCurrentCards((prev) => (prev === 0 ? cards.length - 1 : prev - 1))
+        setCurrentCards((prev) => (prev === 0 ? tarotCards.length - 1 : prev - 1))
     }
 
     const nextCard = () => {
-        setCurrentCards((prev) => (prev === cards.length - 1 ? 0 : prev + 1))
+        setCurrentCards((prev) => (prev === tarotCards.length - 1 ? 0 : prev + 1))
     }
+
+    if (loading) return <p>Cargando cartas...</p>
+
     return (
         <>
             <div className="carousel">
@@ -28,17 +53,24 @@ const CarouselCards = () => {//ver como adaptar esto de la API
                     <ChevronLeft size={32}></ChevronLeft>
                 </button>
 
-                {/* <img src={cards[currentCards]} alt="carta-actual" /> */}
                 {/* Cartas */}
                 <div className="carousel-cards">
-                    {cards.map((card, index) => {
-                        const position = (index - currentCards + cards.length) % cards.length
+                    {tarotCards.map((card, index) => {
+                        const position = (index - currentCards + tarotCards.length) % tarotCards.length
                         return (
-                            <div key={index} className={`card ${position === 0 ? "active" : ""}`} style={{ transform: `translateX(${(position - 1) * 220}px)`}}>
-                                <img src={card} alt={`Carta ${index}`} />
+                            <div key={card.id || index} className={`card ${position === 0 ? "active" : ""}`} style={{ transform: `translateX(${(position - 1) * 220}px)` }}>
+                                <img src="/base-card-tarot.PNG" alt={`Carta ${index}`} />
                             </div>
                         )
                     })}
+                    {/* {cards.map((card, index) => {
+                        const position = (index - currentCards + cards.length) % cards.length
+                        return (
+                            <div key={index} className={`card ${position === 0 ? "active" : ""}`} style={{ transform: `translateX(${(position - 1) * 220}px)` }}>
+                                <img src={card} alt={`Carta ${index}`} />
+                            </div>
+                        )
+                    })} */}
                 </div>
 
                 <button onClick={nextCard} className="arrow right">

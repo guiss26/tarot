@@ -24,19 +24,68 @@
 }
 
 .cards-box {
-    /* background-color: aqua; */
-    padding: 70px 20px;
-    /* width: 800px; */
-    width: 100%;
+    /* padding: 70px 20px; */
+    /* width: 100%; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    perspective: 1000px;/*clave para el efecto 3D*/
+
+    width: 900px;
+    flex-wrap: wrap;
+    gap: 30px;
+    /*problema que se superpone al footer<<<<<<*/
 }
 
-.card-tarot-s {
+/* .card-tarot-s {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    background-color: rebeccapurple;
+} */
+
+.card-t {
+    width: 200px;
+    height: 300px;
+    position: relative;
+
+    transform-style: preserve-3d;/*?*/
+    transition: all 0.8s ease;/*?*/
+
+    cursor: pointer;
+}
+
+.card-t:hover {
+    transform: rotateY(180deg);
+}
+
+/*front y back*/
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; /*ocultar cuando están de espaldas*/
+}
+
+.front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
 }
 
 .img-card {
-    width: 200px;/*prueba*/
+    /* width: 200px;/ */
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    object-fit: contain;
 }

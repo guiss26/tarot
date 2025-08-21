@@ -19,7 +19,7 @@ const routerTarot = createBrowserRouter([{
             element: <CardsTarot/>
         },
         {
-            path: "/carta-detalle",
+            path: "/carta-detalle/:id",
             element: <CardDetail/>
         },
         {
