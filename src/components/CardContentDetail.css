@@ -73,6 +73,17 @@
     font-size: 13px;
 }
 
-@media (max-width: 768px) {
-    
+@media (max-width: 854px) {
+    .card-content-detail {
+        margin: 0 4%;
+        gap: 30px;
+    }
+
+    @media (max-width: 541px) {
+        .card-content-detail {
+            flex-direction: column;
+            margin: 0 10%;
+        }
+
+    }
 }
