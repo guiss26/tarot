@@ -23,9 +23,9 @@ const Navbar = () => {
                 <li className="menu-item">
                     <Link to="/cartas-tarot" className="nav-link" onClick={() => setIsOpen(false)}>Cartas</Link>
                 </li>
-                <li className="menu-item">
+                {/* <li className="menu-item">
                     <Link to="/lectura" className="nav-link" onClick={() => setIsOpen(false)}>Lectura</Link>
-                </li>
+                </li> */}
             </ul>
         </nav>
     )

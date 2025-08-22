@@ -14,12 +14,12 @@ const Home = () => {
                 <h2 className="home-subtitle">Conecta con la energía del pasado, presente y futuro con una simple tirada de 3 cartas</h2>
 
                 <div className="buttons-home">
-                    <ReadingButton />
+                    {/* <ReadingButton /> */}
                     <Link to="/cartas-tarot" className='reading-button back-btn btn-cards-home'>Ver cartas</Link>
                 </div>
             </section>
             <section className="instructions">
-                <AccordionHome></AccordionHome>
+                {/* <AccordionHome></AccordionHome> */}
                 <p className="paragraph-home">🪐"El universo siempre responde, si sabes escuchar."</p>
             </section>
 
