@@ -1,8 +1,12 @@
 #top {
     background-color: var(--color-shadow-black);
-    padding: 25px 40px;
+    /* padding: 25px 40px; */
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
+
+    align-items: center;
+    position: relative;
 }
 
 .nav-title, .nav-link {
@@ -12,6 +16,7 @@
 
 .nav-title {
     font-size: 25px;
+    font-weight: bold;
 }
 
 .menu {
@@ -20,6 +25,8 @@
     align-items: center;
     list-style: none;
     gap: 30px;
+
+    transition: all 0.3s ease;
 }
 
 .menu-item {
@@ -30,4 +37,37 @@
     color: #9b9b9a;
     background-color: #424242;
     text-decoration: underline;
+}
+
+/*dropdown hamburguer button*/
+.hamburguer-button {
+    font-size: 28px;
+    background: none;
+    color: var(--color-text-nav-footer);
+    cursor: pointer;
+    display: none;/*oculto en desktop*/
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+    .hamburguer-button {
+        display: block; /*se muestre en móvil*/
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px; /*justo debajo del navbar*/
+        /* right: 0; */
+        left: 0;
+        background: var(--color-shadow-black);
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+        gap: 20px;
+        display: none; /* oculto por defecto */
+    }
+
+    .menu.open {
+        display: flex; /* aparece cuando se abre */
+    }
 }
