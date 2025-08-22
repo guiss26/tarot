@@ -70,4 +70,10 @@
     .menu.open {
         display: flex; /* aparece cuando se abre */
     }
+
+    @media (max-width: 391px) {
+        .nav-title {
+            font-size: 23px;
+        }
+    }
 }

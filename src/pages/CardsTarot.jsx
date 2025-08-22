@@ -30,7 +30,7 @@ const CardsTarot = () => {
                 <div className="text-descripction-cards-tarot">
                     <h2 className="subtitle-cards-tarot">Descubre las Diosas Contemporáneas de la Ciencia y la Tecnología</h2>
                     <p className="paragraph-cards-tarot">Haz clic en cualquier carta para ver su detalle</p>
-                    <ReadingButton></ReadingButton>
+                    {/* <ReadingButton></ReadingButton> */}
                 </div>
 
                 <div className="cards-box h-screen centered">

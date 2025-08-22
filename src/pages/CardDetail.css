@@ -39,3 +39,9 @@
     margin-bottom: 50px;
     font-style: italic;
 }
+
+@media (max-width: 431px) {
+    .paragraph-detail {
+        margin: 10px 30px 50px 30px;
+    }
+}

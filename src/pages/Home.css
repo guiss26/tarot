@@ -27,6 +27,17 @@
     font-size: 18px;
 }
 
+.buttons-home {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-home .btn-cards-home {
+    margin: 10px 0;
+}
+
 /*SECTION instructions*/
 .instructions {
     padding: 50px 0;
