@@ -33,10 +33,6 @@ const CardDetail = () => {
         <>
             <section className="card-detail-section">
                 <div className="title-content">
-                    {/* <h2>Detalle cartas</h2> */}
-
-                    {/* <h3 className='title-detail'>🔮 La sacerdotiza</h3>
-                    <p className='subtitle-detail'>Arcano #1</p> */}
                     <h3 className='title-detail'>🔮 {oneCard.arcaneName}</h3>
                     <p className='subtitle-detail'>Arcano #{oneCard.arcaneNumber}</p>
                 </div>

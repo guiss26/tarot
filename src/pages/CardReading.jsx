@@ -48,7 +48,7 @@ const CardReading = () => {
                 </div>
                 
                 <CardsReadingSelect selectedCards={selectedCards}></CardsReadingSelect>
-
+                
                 <div className='cards-select'>
                     <div className="text-btn-lecture">
                         {/* <p>Escoge una carta para: <span>Presente</span></p> */}

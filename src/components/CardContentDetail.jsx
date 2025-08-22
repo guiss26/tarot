@@ -32,14 +32,14 @@ const CardContentDetail = () => {
     return (
         <>
             <article className="card-content-detail">
-                <div className='card-tarot-description'>
+                <div className='card-tarot-description scroll-bar-style'>
                     <h4 className='title-tarot-card'>Tarot</h4>
                     <img className='img-card-tarot' src={oneCard.arcaneImage.imageSrc} alt={oneCard.arcaneName} />
                     <p className='title-tarot'>Significado</p>
                     <p className='description-tarot'>{oneCard.arcaneDescription}</p>
 
                 </div>
-                <div className='card-scientist-description'>
+                <div className='card-scientist-description scroll-bar-style'>
                     <h4 className='title-scientist-card'>Diosa Contemporánea</h4>
                     <img className='img-card-scientist' src={oneCard.goddessImage.imageSrc} alt={oneCard.goddessName} />
                     <p className='title-scientist'>{oneCard.goddessName}</p>
