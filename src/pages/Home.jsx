@@ -10,7 +10,7 @@ const Home = () => {
         <>
             <section className="tarot-img-descrip">
                 <h1 className="home-title">✨ Descubre lo que el tarot tiene para ti ✨</h1>
-                <img className="img-tarot" src="public\tarot-mistico-img.png" alt="tarot-mistico" />
+                <img className="img-tarot" src="/tarot-mistico-img.png" alt="tarot-mistico" />
                 <h2 className="home-subtitle">Conecta con la energía del pasado, presente y futuro con una simple tirada de 3 cartas</h2>
 
                 <div className="buttons-home">
