@@ -11,15 +11,6 @@ const CardContentDetail = () => {
     
     useEffect(() => {
         const fetchCard = async () => {
-            // try {
-            //     const data = await getOneCard(id)
-            //     setOneCard(data)
-            // } catch (error) {
-            //     console.error('Error cargando la carta: ', error)
-            // } finally {
-            //     setLoading(false) //Para que React sepa que ya terminó la carga
-            // }
-
             const data = await getOneCard(id)
             setOneCard(data)
             setLoading(false)

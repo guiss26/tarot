@@ -4,7 +4,6 @@ import ReadingButton from "../components/ReadingButton"
 import { getAllCards } from '../services/TarotServices'
 import { useState, useEffect } from 'react'
 
-//HACER AQUÍ LLAMADA A LA API
 const CardsTarot = () => {
     /** PETICIÓN API - GET */
     const [tarotCards, setTarotCards] = useState([])//crea un estado llamado tarotCards que empieza con un array vacío.Aquí se guardarán la lista de las card que vienen de la API
