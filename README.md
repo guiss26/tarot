@@ -3,12 +3,17 @@
 Este proyecto forma parte de una iniciativa educativa basada en un **tarot místico**: una aplicación web interactiva dónde podras visualizar las cartas del tarot, ver el detalle de cada una de ellas y qué mujeres del mundo de la ciencia y tecnología están relacionadas 👩‍🔬
 
 ## 🎯 Funcionalidades Nivel 1:
-- Mostrar las cartas del tarot que se obtienen al hacer una petición GET a un API externa, boca abajo.
-- Mostrar el detalle de cada una de las cartas del tarot al hacer clic y visualizar su información así como la de la científica en correspondencia.
+- Mostrar las cartas del tarot que se obtienen API externa, boca abajo.
+    👉 Hacer un GET de todas las cartas y mostrarlas en pantalla
+    👉 Hooks utilizados: useEffect y useState  
+- Al hacer clic en una carta mostrar la información de las cartas.
+    👉 Hacer una petición GET por ID de cada carta y mostrar la información de las cartas y científicas correspondientes a la carta del tarot.
+    👉 Hooks utilizados: useParams, useEffect, y useState.
 
 ## 💻 Tecnologías y librerías utilizadas
 - **HTML5, CSS3 y JavaScript**: Fundamentos del desarrollo web.
 - **React**: Librería para construir interfaces de usuario basadas en componentes.
+- **React Router**: Navegación entre páginas.
 - **Vite**: Herramienta de construcción para un trabajo rápido y moderno con React.
 - **Lucide Icons**: 
     - Biblioteca de íconos de código abierto.
@@ -17,7 +22,9 @@ Este proyecto forma parte de una iniciativa educativa basada en un **tarot míst
     - Biblioteca de componentes de interfaz de usuario para React.
     - Proporciona componentes utilizados y listos para usar para acelerar el desarrollo de aplicaciones web y móviles.
     - Uso en el proyecto: para hacer el acordeón de la página principal.
-
+- **API externa**:
+    - API creada por equipo formativo FactoriaF5 Barcelona🌟 
+    - https://6872278c76a5723aacd3cbb3.mockapi.io/api/v1/tarot
 
 ## 🗂️ Estructura del proyecto
 
@@ -57,3 +64,10 @@ tarot/
 3. Ejecutar la aplicación React:
    ```bash
    npm run dev
+
+## 🌟 Futuras mejoras
+- Lectura de cartas (Pasado, Presente, Futuro)
+
+## 👩‍💻 Autor
+- Guissella Pérez
+- 🐙 GitHub: https://github.com/guiss26
