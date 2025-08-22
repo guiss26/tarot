@@ -45,6 +45,7 @@ const CardsTarot = () => {
                         {/* back */}
                         <div className="card-face back-card-img-api back">
                             <Link to={`/carta-detalle/${cardTarot.id}`}><img className='img-card' src={cardTarot.arcaneImage.imageSrc} alt={cardTarot.arcaneName} /></Link>
+                            {/**{`/carta-detalle/${cardTarot.id}`} añadir cardTarot.map */}
                         </div>
                     </div>
                     ))} 
